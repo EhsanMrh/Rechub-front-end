@@ -1,0 +1,48 @@
+@import "../../../../../../../stylesheets/abstract/index.scss";
+
+.article-migration-item {
+    align-items: center;
+    border-radius: $m-border-radius;
+    box-shadow: $box-shadow;
+    cursor: pointer;
+    display: flex;
+    height: 23.4rem;
+    justify-content: center;
+    margin-bottom: $xs-margin-size;
+    position: relative;
+    width: 100%;
+
+    &:hover {
+        box-shadow: $box-shadow-hover;
+        transform: scale(0.99);
+    }
+
+    &:active {
+        box-shadow: none;
+        transform: scale(0.97);
+    }
+
+    @include breakpoint(min, small) {
+        height: 28.8rem;
+        width: 43rem;
+    }
+
+    &__link {
+        height: 100%;
+        width: 100%;
+    }
+
+    &__small-title {
+        color: #ffffff;
+        font-size: $s-font-size;
+        position: absolute;
+        top: 20%;
+        right: 10%;
+    }
+
+    &__large-title {
+        color: #ffffff;
+        font-size: $xxl-font-size;
+        font-weight: bold;
+    }
+}

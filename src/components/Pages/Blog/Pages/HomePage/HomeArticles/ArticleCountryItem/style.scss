@@ -1,0 +1,63 @@
+@import "../../../../../../../stylesheets/abstract/index.scss";
+
+.article-country-item {
+    border-radius: $m-border-radius;
+    box-shadow: $box-shadow;
+    height: 14.4rem;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: $xs-margin-size;
+    width: 14.4rem;
+
+    &:hover {
+        box-shadow: $box-shadow-hover;
+        transform: scale(0.99);
+    }
+
+    &:active {
+        box-shadow: none;
+        transform: scale(0.97);
+    }
+
+    @include breakpoint(min, small) {
+        height: 21.6rem;
+        width: 21.6rem;
+    }
+
+
+    &__image {
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+
+    &__title {
+        align-items: center;
+        background-image: linear-gradient(138deg, $half-dark-blue, $half-blue);
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 4rem;
+        justify-content: center;
+        width: 100%;
+
+        @include breakpoint(min, small) {
+            height: 6rem;
+        }
+
+        &-text {
+            color: #ffffff;
+            font-size: $s-font-size;
+            font-weight: normal;
+            margin: 0;
+
+            @include breakpoint(min, small) {
+                font-size: $l-font-size;
+            }
+        }
+    }
+}

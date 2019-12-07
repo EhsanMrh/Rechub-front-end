@@ -1,0 +1,224 @@
+ @import '../../../../../../../stylesheets/abstract/index.scss';
+
+.info {
+    align-items: center;
+    background: $light-blue;
+    border-radius: $m-border-radius;
+    box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: $m-margin-size;
+    padding-top: $m-padding-size;
+    position: relative;
+    width: 100%;
+
+    @include breakpoint(min, small) {
+        margin: 0 auto;
+        margin-bottom: $l-margin-size;
+        width: 90%;
+    }
+
+    &__avatar {
+        // align-items: center;
+        background-color: #ffffff;
+        border-radius: 50%;
+        // display: flex;
+        height: 12rem;
+        // justify-content: center;
+        // overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 12rem;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 85%;
+            z-index: 10;
+        }
+
+        .progressbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 12rem;
+            width: 12rem;
+        }
+    }
+
+    &__content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 70%;
+        justify-content: space-evenly;
+        padding: 0 $xs-padding-size;
+        padding-bottom: $xs-padding-size;
+        width: 100%;
+
+        .content {
+            &__name {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                height: 50%;
+                justify-content: space-evenly;
+                width: 100%;
+
+                h2 {
+                    color: $dark-blue;
+                    font-size: $m-font-size;
+                    margin: $xxs-margin-size 0;
+                }
+
+            }
+
+            &__describe {
+                height: 50%;
+                width: 100%;
+
+                .describe {
+                    &__header {
+                        align-items: center;
+                        border-bottom: 1px solid #ffffff;
+                        color: #ffffff;
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+
+                        h3 {
+                            font-size: $s-font-size;
+                        }
+
+                        .show-detail {
+                            align-items: center;
+                            display: flex;
+
+                            span {
+                                font-size: $s-font-size;
+                            }
+
+                            div {
+                                position: relative;
+
+                                input {
+                                    cursor: pointer;
+                                    opacity: 0;
+                                    height: 1.4rem;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    width: 1.8rem;
+                                }
+
+                                .icon {
+                                    height: 1.4rem;
+                                    width: 1.8rem;
+                                    margin: 0 $xxs-margin-size; 
+                                }
+                            }
+
+                            .rotate-arrow {
+                                transform: rotateX(180deg);
+                                transform-origin: 50%;
+                            }
+                        }
+                    }
+
+                    &__more-details {
+                        position: relative;
+                        margin-top: $xxs-margin-size;
+
+                        @include breakpoint(min,small) {
+                            align-items: center;
+                            display: flex;
+                            flex-wrap: wrap;
+                        }
+
+                        button {
+                            background-image: linear-gradient(318deg, $blue, $dark-blue);
+                            border: none;
+                            border-radius: 50%;
+                            position: absolute;
+                            top: 10%;
+                            left: 5%;
+                            height: 4.7rem;
+                            width: 4.7rem;
+
+                            .icon {
+                                color: #ffffff ;
+                                height: 50% ;
+                                width: 100% ;
+                            }
+                        }
+
+                        .detail {
+                            align-items: center;
+                            display: flex;
+                            // justify-content: flex-start ;
+                            width: 100%;
+
+                            @include breakpoint(min, small) {
+                                width: 50%;
+                            }
+
+                            h4 {
+                                color: $grey;
+                                font-size: $s-font-size;
+                                margin: 0;
+                                width: 30%;
+                            }
+
+                            p {
+                                color: $grey;
+                                font-size: $s-font-size;
+                                margin: $xxs-margin-size 0;
+                                text-align: justify;
+                                width: 70%;
+                            }
+                        }
+                    }
+
+                    &__about {
+                        align-items: center;
+                        display: flex;
+                        width: 100%;
+
+                        @include breakpoint(min,small) {
+                            justify-content: flex-start ;
+                        }
+
+                        h4 {
+                            color: $grey;
+                            font-size: $s-font-size;
+                            margin: 0;
+                            width: 30%;
+
+                            @include breakpoint(min,small) {
+                                margin-left: $s-margin-size;
+                                width: fit-content;
+                            }
+                        }
+
+                        p {
+                            color: $grey;
+                            font-size: $s-font-size;
+                            text-align: justify;
+                            width: 70%;
+
+                            @include breakpoint(min, small) {
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

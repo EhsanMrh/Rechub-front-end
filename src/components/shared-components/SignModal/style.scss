@@ -1,0 +1,39 @@
+@import '../../../stylesheets/abstract/index.scss';
+
+.sign-modal {
+    background-color: white;
+    border-radius: $m-border-radius;
+    height: 100%;
+    margin: $m-margin-size $xs-margin-size;
+    overflow: hidden;
+    padding: $s-padding-size;
+    position: relative;
+
+    @include breakpoint(min, small) {
+        margin: 9rem $m-margin-size;
+        padding: 0;
+    }
+
+    .exit-modal {
+        background-image: linear-gradient(318deg, $primary-blue, $dark-blue);
+        border: none;
+        border-radius: 0 0 $m-border-radius 0;
+        cursor: pointer;
+        height: 7%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 12%;
+
+        .icon {
+            color: #ffffff;
+            height: 50%;
+            width: 50%;
+        }
+
+        @include breakpoint(min, small) {
+            height: 8%;
+            width: 4%;
+        }
+    }
+}

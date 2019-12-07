@@ -1,0 +1,154 @@
+@import '../../../../stylesheets/abstract/index.scss';
+
+.home-header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 90vh;
+    position: relative;
+    z-index: 0;
+
+    @include breakpoint(min, small) {
+        height: 78vh ;
+    }
+
+    .button {
+        box-shadow: $box-shadow;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: $box-shadow-hover ;   
+            transform: scale(0.95);
+        }
+    }
+
+    &__top {
+        align-items: flex-start;
+        display: flex;
+        justify-content: space-between;
+        padding: $xs-padding-size;
+        width: 100%;
+        z-index: 10;
+
+        @include breakpoint(min, small) {
+            padding: $s-padding-size $m-padding-size ;
+        }
+
+        &--logo {
+            align-items: center;
+            display: flex;
+            height: 100%;
+            justify-content: right;
+            width: 50%;
+
+            img {
+                height: 4rem;
+                width: 4rem;
+
+                @include breakpoint(min, small) {
+                    height: 9.4rem;
+                    width: 9.4rem ;
+                }
+            }
+
+            .text-logo {
+                font-family: Shabnam;
+                font-size: $l-font-size ;
+                font-weight: bold;
+                text-align: right;
+                padding: 0 $xs-padding-size;
+                color: #4213a2 ;
+
+                @include breakpoint(min, small) {
+                    font-size: $logo-d-font-size ;
+                }
+            }
+        }
+
+        &--button {
+            button {
+                background-image: linear-gradient(-48deg, #316579, #4708af);
+            }
+        }
+    }
+
+    &__info {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-evenly;
+        position: absolute;
+        width: 100%;
+
+        @include breakpoint(min, small) {
+            flex-direction: row ;
+            direction: ltr ;
+        }
+
+        .info {
+            &__bg {
+                // background-image: url('/assets/images/home-header.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                height: 90%;
+                width: 100%;
+
+                @include breakpoint(min, small) {
+                    position: static;
+                    height: 100% ;
+                    width: 50%;
+                    // background-image: url('/assets/images/home-header-desktop.png');
+                }
+            }
+
+            &__content {
+                align-items: center;
+                color: $grey ;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                padding: 0 $xs-padding-size;
+                width: 100% ;
+
+                @include breakpoint(min, small) {
+                    box-sizing: content-box ;
+                    height: 70%;
+                    padding: 0 $s-padding-size ;
+                    padding-top: 10rem ;
+                    width: 50%;
+                }
+
+                h2 {
+                    font-size: $l-font-size;
+                    text-align: center;
+                    width: 100%;
+
+                    @include breakpoint(min, small) {
+                        font-size: $xl-font-size ;
+                    }
+                }
+
+                h3 {
+                    font-size: $s-font-size;
+                    font-weight: normal;
+                    margin-bottom: $s-margin-size;
+                    text-align: center;
+                    line-height: 1.7;
+                    width: 100%;
+
+                    @include breakpoint(min, small) {
+                        font-size: $l-font-size ;
+                    }
+                }
+            }
+
+            &__more {
+                button {
+                    background-image: linear-gradient(318deg, $primary-blue, $light-blue);
+                }
+            }
+        }
+    }
+}

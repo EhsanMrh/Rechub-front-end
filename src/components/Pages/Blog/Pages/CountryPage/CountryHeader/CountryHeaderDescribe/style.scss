@@ -1,0 +1,61 @@
+@import "../../../../../../../stylesheets/abstract/index.scss";
+
+.country-header-describe {
+    align-items: center;
+    background-color: lightcoral;
+    border-radius: $m-border-radius;
+    box-shadow: 0px 2px 10px 0 rgba(1, 1, 1, 0.5);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+
+    &__title {
+        align-items: center;
+        background-color: $half-primary-blue;
+        color: #ffffff;
+        display: flex;
+        font-size: $s-font-size;
+        height: 15%;
+        justify-content: center;
+        width: 100%;
+    }
+
+    &__items {
+        align-items: center;
+        display: flex;
+        color: $blue;
+        flex-direction: column;
+        font-size: $s-font-size;
+        height: 60%;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+
+    &__test-me {
+        align-items: center;
+        background-image: linear-gradient(138deg, $dark-blue, $blue);
+        border-radius: $m-border-radius;
+        box-shadow: $box-shadow;
+        color: #ffffff;
+        cursor: pointer;
+        display: flex;
+        font-size: $s-font-size;
+        height: 5.4rem;
+        justify-content: center;
+        text-decoration: none;
+        width: 22.3rem;
+
+        &:hover {
+            box-shadow: $box-shadow-hover;
+            transform: scale(0.98);
+        }
+
+        &:active {
+            box-shadow: none;
+            transform: scale(0.95);
+        }
+    }
+}

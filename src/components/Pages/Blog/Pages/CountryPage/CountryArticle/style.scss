@@ -1,0 +1,128 @@
+@import '../../../../../../stylesheets/abstract/index.scss';
+
+.country-article {
+    align-items: center ;
+    display: flex ;
+    flex-direction: column ;
+    flex-wrap: wrap ;
+    justify-content: center ;
+    padding: $xs-margin-size ;
+    width: 100%;
+
+    @include breakpoint(min,small) {
+        flex-direction: row ;
+        padding: 0 ;
+    }
+
+    &__img {
+        border-radius: $s-border-radius;
+        height: 18rem;
+        overflow: hidden;
+        width: 100%;
+
+        @include breakpoint(min,small) {
+            height: 32.4rem;
+            margin-right: $xs-margin-size ;
+            width: 57.6rem ;
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &__content {
+
+        @include breakpoint(min,small) {
+            height: 32.4rem;
+            margin-left: $xs-margin-size ;
+            padding: 0 $m-padding-size ;
+            width: 50% ;
+        }
+
+        &--title {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+
+            @include breakpoint(min,small) {
+                justify-content: flex-start ;
+            }
+    
+            h3 {
+                color: $dark-blue;
+                font-size: $s-font-size;
+                font-weight: bold ;
+                margin: $xs-margin-size 0;
+
+                @include breakpoint(min,small) {
+                    font-size: $m-font-size ;
+                }
+            }
+        }
+    
+        &--text {
+            width: 100%;
+    
+            p {
+                color: $grey;
+                font-size: $s-font-size;
+                line-height: 2.5;
+                text-align: justify;
+    
+                a {
+                    color: $primary-blue;
+                }
+            }
+        }
+    }
+
+    &__rating {
+        align-items: center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        height: 18rem;
+        justify-content: space-evenly;
+        margin: $s-margin-size 0;
+        width: 100%;
+
+        @include breakpoint(min,small) {
+            height: 21.6rem;
+            margin-bottom: 0;
+        }
+
+        .rating {
+            &__title {
+                color: $grey;
+                font-size: $s-font-size;
+                font-weight: bold;
+            }
+
+            &__stars {
+                
+            }
+        }
+    }
+}
+
+.react-rater {
+    transform: rotateY(180deg);
+    .react-rater-star {
+        font-size: 3rem; 
+
+        @include breakpoint(min,small) {
+            font-size: 3.5rem;
+        }
+    }
+    .is-active {
+        color: #ffcc00 ;
+    }
+}

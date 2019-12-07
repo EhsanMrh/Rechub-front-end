@@ -1,0 +1,26 @@
+.progressbar {
+    .bar {
+        position: absolute;
+        top: 0 ;
+        left: 0;
+        width: 100% ;
+        height: 100% ;
+        transform: translate(-50%, -50%);
+
+
+        .ant-progress-inner {
+            height: 100% !important;
+            transform: translate(-50%, -50%);
+            width: 100% !important ;
+        }
+    }
+
+    .separator {
+        position: absolute;
+        top: 0 ;
+        left: 0;
+        height: 100% !important;
+        transform: translate(-50%, 0%);
+        width: 100% !important ;
+    }
+}

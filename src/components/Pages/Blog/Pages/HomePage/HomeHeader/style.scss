@@ -1,0 +1,90 @@
+@import '../../../../../../stylesheets/abstract/index.scss';
+
+.blog-home-header {
+    align-items: flex-end;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    height: 36rem;
+    justify-content: flex-start;
+    padding-bottom: $s-padding-size;
+    padding-left: $s-padding-size;
+
+    @include breakpoint(min,small) {
+        align-items: flex-start ;
+        background-color: #000000 ;
+        height: 57.6rem;
+        justify-content: flex-end ;
+        padding-bottom: 0 ;
+    }
+
+    &__content {
+        align-items: center;
+        background-image: linear-gradient(138deg, $half-dark-blue, $half-blue);
+        border-radius: $s-border-radius 0 0 $s-border-radius;
+        display: flex;
+        flex-direction: column;
+        height: 16.2rem;
+        justify-content: space-evenly;
+        width: 100%;
+
+        @include breakpoint(min,small) {
+            border-radius: 0 ;
+            height: 100%;
+            justify-content: center ;
+            padding: 0 $m-padding-size;
+            width: 50rem;
+        }
+
+        &-section {
+            align-items: center ;
+            display: flex ;
+            flex-direction: column ;
+            justify-content: space-evenly ;
+            width: 100% ;
+
+            @include breakpoint(min,small) {
+                align-items: flex-start ;
+            }
+        }
+
+        &-title {
+            color: #ffffff;
+            font-size: $s-font-size;
+            opacity: 1;
+        }
+
+        
+        &-text {
+            color: #ffffff ;
+            font-size: $m-font-size ;
+            line-height: 2 ;
+        }
+
+        &-link {
+            align-items: center ;
+            background-image: linear-gradient(138deg, $dark-blue, $blue);
+            border: none;
+            border-radius: $m-border-radius ;
+            box-shadow: $box-shadow ;
+            color: $light-grey ;
+            cursor: pointer ;
+            display: flex ;
+            font-family: $font-family ;
+            font-size: $s-font-size ;
+            height: 3.6rem;
+            justify-content: center ;
+            width: 16.2rem;
+
+            &:hover {
+                box-shadow: $box-shadow-hover ;
+                transform: scale(0.99);
+            }
+
+            &:active {
+                box-shadow: none ;
+                transform: scale(0.97);
+            }
+        }
+    }
+}

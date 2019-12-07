@@ -1,0 +1,20 @@
+@import '../../../../../../stylesheets/abstract/index.scss';
+
+.resume {
+    position: relative ;
+
+    @include breakpoint(min, small) {
+        position: absolute;
+        left: 0;
+        padding: 0 $l-padding-size;
+        width: 80%;
+    }
+
+    &__submit {
+        background-image: linear-gradient(138deg, $dark-blue, $blue);
+        color: #ffffff;        
+        height: 5rem;
+        margin: $xs-margin-size $m-margin-size;
+        width: 80%;
+    }
+}

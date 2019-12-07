@@ -1,0 +1,149 @@
+@import '../../../../../stylesheets/abstract/index.scss';
+
+.call {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 $xs-padding-size;
+
+    @include breakpoint(min, small) {
+        direction: ltr;
+        flex-direction: row;
+        padding: 0 $m-padding-size ;
+    }
+
+    &__img {
+        height: 26.4rem;
+        width: 100%;
+        object-fit: contain;
+
+        @include breakpoint(min, small) {
+            height: 100%;
+            margin: 0 $m-margin-size;
+            width: 40%;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &__title {
+        color: $primary-blue;
+        font-size: $xl-font-size;
+    }
+
+    &__items {
+        direction: rtl ;
+        padding: 0 $xs-padding-size;
+        width: 100%;
+
+        @include breakpoint(min, small) {
+            height: 100%;
+            width: 60%;
+        }
+
+        .item {
+            @include breakpoint(min, small) {
+                margin: $xxs-margin-size 0 ;
+                margin-left: $xxs-margin-size ;
+                min-width: 40%;
+            }
+
+            a {
+                align-items: center;
+                display: flex;
+                justify-content: flex-start;
+                text-decoration: none;
+                
+
+                span {
+                    align-items: center;
+                    background-color: $primary-blue;
+                    border-radius: 50%;
+                    box-shadow: 0 0 0 rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+                    display: flex;
+                    min-height: 5.4rem;
+                    justify-content: center;
+                    margin-left: $xxs-margin-size ;
+                    transition-duration: 0.3s;
+                    min-width: 5.4rem;
+
+                    @include breakpoint(min, small) {
+                        margin-left: $xs-margin-size ;
+                    }
+
+                    &:active {
+                        box-shadow: none;
+                        transform: scale(0.85);
+                    }
+
+                    &:hover {
+                        box-shadow: 0 0 0 rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.22);
+                        transform: scale(0.95);
+                    }
+
+                    .icon {
+                        color: #ffffff ;
+                        height: 2.5rem;
+                        width: 2.5rem;
+                    }
+                }
+
+                P {
+                    color: $grey;
+                    display: none;
+                    font-size: $l-font-size;
+
+                    @include breakpoint(min, small) {
+                        display: inline-block;
+                        margin: 0 ;
+                    }
+                }
+            }
+        }
+
+        .items {
+            &__connect {
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+
+                @include breakpoint(min, small) {
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                }
+            }
+
+            &__address {
+                margin: $xxs-margin-size 0;
+                width: 100%;
+
+                @include breakpoint(min, small) {
+                    // width: 50% ;
+                }
+
+                a {
+                    align-items: center;
+                    display: flex;
+                    justify-content: flex-start ;
+                    width: 100%;
+
+                    div {
+                        color: $grey;
+                        display: inline-block;
+                        font-size: $s-font-size;
+                        text-align: justify;
+
+                        @include breakpoint(min, small) {
+                            font-size: $l-font-size ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

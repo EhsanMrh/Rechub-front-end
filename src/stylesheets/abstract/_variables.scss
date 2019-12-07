@@ -1,0 +1,61 @@
+$public-path: '/static/';
+
+// Colors
+$light-blue: #b3cad6;
+$primary-blue: #419bbc;
+$half-primary-blue: rgba(65, 155, 188, 0.5) ;
+$blue: #316579 ;
+$half-blue: rgba(49, 101, 121, 0.5) ;
+$dark-blue: rgb(66, 19, 162) ;
+$half-dark-blue: rgba(67, 19, 162, 0.5) ;
+$light-grey: #ebebeb;
+$grey: #555555 ; 
+
+// Fonts
+$font-family: 'Shabnam';
+
+// Font Sizes
+$xxs-font-size: 1rem ;
+$xs-font-size: 1.2rem ;
+$s-font-size: 1.6rem ;
+$m-font-size: 1.8rem ;
+$l-font-size: 2.2rem ;
+$xl-font-size: 3rem ;
+$xxl-font-size: 3.5rem ;
+$logo-d-font-size: 5.4rem ;
+
+// Button
+$btn-height: 4rem ;
+$btn-width: 14.4rem ;
+
+// Padding sizes
+$xxs-padding-size: 0.9rem ;
+$xs-padding-size: 1.8rem ;
+$s-padding-size: 3.6rem ;
+$m-padding-size: 7.2rem ;
+$l-padding-size: 14.4rem ;
+
+// Margin sizes
+$xxs-margin-size: 0.9rem ;
+$xs-margin-size: 1.8rem ;
+$s-margin-size: 3.6rem ;
+$m-margin-size: 7.2rem ;
+$l-margin-size: 14.4rem ;
+
+// Border reduce 
+$s-border-radius: 1rem ;
+$m-border-radius: 2.5rem ;
+$input-border-radius: 1.8rem ;
+
+$box-shadow: 0 5px 15px rgba(0,0,0,0.25), 0 5px 10px rgba(0,0,0,0.22); 
+$box-shadow-hover: 0 5px 10px rgba(0,0,0,0.2), 0 5px 5px rgba(0,0,0,0.20);      
+
+// Responsive map
+
+$breakpoints: (
+  'x-large': 1400px,
+  'large': 1200px,
+  'medium': 1000px,
+  'small': 800px,
+  'tiny': 600px,
+);

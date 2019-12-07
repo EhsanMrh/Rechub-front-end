@@ -1,0 +1,94 @@
+@import '../../../../stylesheets/abstract/index.scss';
+
+
+.newsletters {
+    align-items: center;
+    background-repeat: no-repeat ;
+    display: flex;
+    flex-direction: column;
+    height: 25.2rem;
+    justify-content: flex-start;
+    padding: $xs-padding-size;
+    width: 100%;
+
+    @include breakpoint(min,small) {
+        height: 28.8rem;
+    }
+
+    &__content {
+        align-items: center; 
+        display: flex ;
+        flex-direction: column;
+        height: 100% ;
+        justify-content: space-evenly ;
+        @include breakpoint(min,small) {
+            width: 50% ;
+        }
+
+        p {
+            color: #ffffff;
+            font-size: $s-font-size;
+            line-height: 1.88;
+            text-align: justify;
+        }
+
+        form {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            height: 70%;
+            justify-content: space-evenly;
+            width: 100%;
+
+            @include breakpoint(min,small) {
+                width: 70% ;
+            }
+
+            input {
+                background-color: $light-grey;
+                border: none;
+                border-radius: $s-border-radius;
+                font-size: $s-font-size;
+                height: 3.6rem;
+                padding: $xxs-padding-size $xs-padding-size;
+                transition-duration: .8s ;
+                width: 100%;
+
+                &::placeholder {
+                    color: #ffffff;
+                    font-size: $s-font-size;
+                    font-family: $font-family;
+                }
+
+                &:focus {
+                    transition-duration: .8s ;
+                    transform: scale(1.05);
+                    box-shadow: $box-shadow ;
+                }
+            }
+
+            button {
+                background-image: linear-gradient(138deg, $dark-blue, $blue);
+                border: none;
+                border-radius: $m-border-radius;
+                box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.25);
+                color: #ffffff;
+                cursor: pointer;
+                font-size: $s-font-size;
+                font-family: $font-family;
+                height: 3.6rem;
+                width: 60%;
+
+                &:hover {
+                    box-shadow: $box-shadow-hover ;
+                    transform: scale(0.98);
+                }
+    
+                &:active {
+                    box-shadow: none ;
+                    transform: scale(0.95);
+                }
+            }
+        }
+    }
+}

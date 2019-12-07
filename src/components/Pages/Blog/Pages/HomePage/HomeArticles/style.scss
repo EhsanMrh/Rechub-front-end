@@ -1,0 +1,75 @@
+@import '../../../../../../stylesheets/abstract/index.scss';
+
+.home-articles {
+    width: 100%;
+
+    &__countries {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: $xxs-padding-size $xs-padding-size;
+
+        &-title {
+            color: $grey;
+            font-size: $s-font-size;
+            margin-bottom: $s-margin-size;
+
+            @include breakpoint(min, small) {
+                font-size: $xxl-font-size;
+            }
+        }
+
+        &-country {
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: $s-margin-size;
+
+            @include breakpoint(min, small) {
+                justify-content: space-evenly;
+                width: 100%;
+            }
+        }
+    }
+
+    &__migration {
+        align-items: center;
+        background: $light-grey;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: $xs-padding-size;
+
+        @include breakpoint(min, small) {
+            padding: $s-padding-size;
+        }
+
+        &-title {
+            color: $grey;
+            font-size: $s-font-size;
+            margin: $s-margin-size 0;
+
+            @include breakpoint(min, small) {
+                font-size: $xxl-font-size;
+            }
+        }
+
+        &-types {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            position: relative;
+            width: 100%;
+
+
+            @include breakpoint(min, small) {
+                flex-direction: row;
+            }
+
+            
+        }
+    }
+}

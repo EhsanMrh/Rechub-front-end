@@ -1,0 +1,167 @@
+@import "../../../../stylesheets/abstract/index.scss";
+
+.sign-modal__phone {
+    height: 100%;
+    position: relative;
+
+    &--signup {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+    }
+
+    &--signin {
+        height: 100%;
+        position: absolute;
+        display: none;
+        width: 100%;
+    }
+
+    .modal {
+        &__top {
+            align-items: center;
+            display: flex;
+            height: 10%;
+            justify-content: space-between;
+            padding: 0 $xxs-padding-size;
+
+            h3 {
+                color: $grey;
+                font-size: $l-font-size;
+                margin: 0;
+            }
+
+            .g-icon {
+                align-items: center;
+                display: flex;
+                background-image: linear-gradient(318deg, $primary-blue, $dark-blue);
+                border: none;
+                border-radius: 50%;
+                height: 4.1rem;
+                justify-content: center;
+                padding: 0;
+                width: 4.1rem;
+
+                img {
+                    height: 60%;
+                    width: 60%;
+                }
+            }
+        }
+
+        &__form {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            height: 70%;
+            justify-content: space-evenly;
+
+            .form {
+                &__inputs {
+                    align-items: flex-start;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    margin-top: $xxs-margin-size;
+                    padding-right: $xxs-padding-size;
+                    width: 100%;
+
+                    &>div {
+                        width: 100%;
+                    }
+
+                    //
+
+                    input[type="text"],
+                    input[type="email"],
+                    input[type="password"] {
+
+                        // show success!
+                        &:valid {
+                            border: 1px solid green;
+                        }
+
+                        &:invalid:not(:focus):not(:placeholder-shown) {
+                            background: pink;
+                        }
+
+                        &:invalid:focus:not(:placeholder-shown) {
+                            &~.requirement {
+                                max-height: 200px;
+                                padding: 0 30px 20px 50px;
+                            }
+                        }
+                    }
+
+                    .requirement {
+                        padding: 0 30px 0 50px;
+                        color: #999;
+                        max-height: 0;
+                        transition: 0.28s;
+                        overflow: hidden;
+                        color: red;
+                        font-style: italic;
+                    }
+
+                    input {
+                        border: 1px solid $light-grey;
+                        border-radius: $input-border-radius;
+                        font-size: $xs-font-size;
+                        margin-bottom: $xs-margin-size;
+                        padding: $xxs-padding-size $xs-padding-size;
+                        width: 100%;
+                        font-family: $font-family;
+
+                        &::placeholder {
+                            color: $light-grey;
+                            font-size: $s-font-size;
+                        }
+                    }
+                }
+
+                &__to-login {
+                    align-items: center;
+                    display: flex;
+                    justify-content: space-evenly;
+                    width: 100%;
+
+                    p {
+                        color: $light-grey;
+                        font-size: $m-font-size;
+                        font-weight: bold;
+                    }
+
+                    button {
+                        background-image: linear-gradient(318deg, $primary-blue, $dark-blue), linear-gradient(to bottom, #ffffff, #ffffff);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        border: 1px solid black;
+                        border-image: linear-gradient(318deg, $primary-blue, $dark-blue) 1;
+                        color: #000000;
+                        font-size: $m-font-size;
+                        font-weight: bold;
+                        height: 4rem;
+                        width: 12.6rem;
+                    }
+                }
+            }
+
+            .button {
+                background-image: linear-gradient(318deg, $primary-blue, $dark-blue);
+                box-shadow: $box-shadow;
+                font-size: $m-font-size;
+                height: 5.4rem;
+                transition-duration: 0.5s;
+                width: 100%;
+
+                &:hover {
+                    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.2);
+                }
+
+                &:active {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}

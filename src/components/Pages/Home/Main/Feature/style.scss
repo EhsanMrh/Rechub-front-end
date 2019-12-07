@@ -1,0 +1,117 @@
+@import '../../../../../stylesheets/abstract/index.scss';
+
+.feature {
+    background-color: $primary-blue;
+    border-bottom: 1rem solid $dark-blue ;
+    height: 79rem;
+    padding: $m-padding-size 0;
+
+    @include breakpoint(min, small) {
+        height: 25rem  ;
+        // border: none ;
+    }
+
+    &__cards {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+        perspective: 1000px;
+
+        @include breakpoint(min, small) {
+            flex-direction: row ;
+            justify-content: space-evenly ;
+        }
+
+        .card-container {
+            position: relative;
+            transform-style: preserve-3d;
+            width: 18rem;
+            height: 18rem;
+
+            .base-card {
+                backface-visibility: hidden;
+                height: 100%;
+                position: absolute;
+                overflow: hidden;
+                align-items: center;
+                background-color: $light-grey;
+                border-radius: $s-border-radius;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                width: 100%;
+            }
+        }
+
+        .cards {
+            &__card {
+                &--front {
+                    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+                    &:hover {
+                        box-shadow: $box-shadow-hover ;
+                        transform: scale(0.95);
+                    }
+                    
+                    img {
+                        height: 70%;
+                        width: 70%;
+                    }
+
+                    h2 {
+                        font-size: $l-font-size;
+                    }
+                }
+
+                &--back {
+                    transform: rotateY(180deg);
+
+                    .back {
+                        display: flex ;
+                        flex-direction: column ;
+                        justify-content: flex-start ;
+
+                        &__header {
+                            align-items: center ;
+                            background-image: linear-gradient(138deg, $dark-blue, $primary-blue);
+                            color: #ffffff ;
+                            display: flex ;
+                            justify-content: space-evenly ;
+                            height: 40% ;
+                            width: 100%; 
+
+                            img {
+                                height: 80%;
+                                width: 40% ;
+                            }
+
+                            h2 {
+                                font-size: $m-font-size;
+                            }
+                        }
+
+                        &__content {
+                            background-color: inherit ;
+                            height: 60% ;
+                            padding: $xs-padding-size $xxs-padding-size ;
+                            width: 100% ;
+
+                            p {
+                                color: $grey;
+                                font-size: $s-font-size ;
+                                height: 100% ;
+                                line-height: 1.5 ;
+                                margin: 0 ;
+                                text-align: justify ;
+                                width: 100% ;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

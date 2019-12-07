@@ -1,0 +1,243 @@
+@import '../../../../../stylesheets/abstract/index.scss';
+
+.description {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .button {
+        box-shadow: $box-shadow;
+
+        &:hover, &:active {
+            box-shadow: $box-shadow-hover;
+            transform: scale(0.95);
+        }
+    }
+
+    h2 {
+        color: $grey;
+        font-size: $xxl-font-size;
+    }
+
+    h3 {
+        color: $grey;
+        font-size: $s-font-size;
+    }
+
+    &__content {
+        align-items: center;
+        background-color: $light-grey;
+        border-radius: $s-border-radius;
+        display: flex;
+        height: 21.5rem;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        width: 90%;
+
+        @include breakpoint(min, small) {
+            height: 50rem;
+        }
+
+
+        &--first {
+            align-items: center;
+            display: flex;
+            height: 90%;
+            justify-content: space-evenly;
+            position: absolute;
+            width: 100%;
+
+            .first__immigration {
+                border-left: 2px solid #ffffff;
+                width: 50%;
+
+                .work-img {
+                    img {
+                        height: 5rem;
+                        width: 11.7rem;
+
+                        @include breakpoint(min, small) {
+                            width: 39rem;
+                            height: 16.5rem;
+                        }
+                    }
+                }
+
+            }
+
+            .first__immigrant {
+                .work-img {
+                    img {
+                        height: 8rem;
+                        width: 6.3rem;
+
+                        @include breakpoint(min, small) {
+                            height: 16rem;
+                            width: 12.4rem;
+                        }
+                    }
+                }
+            }
+
+            div {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                padding: 0 $xxs-padding-size;
+                height: 90%;
+                width: 50%;
+
+                .work-img {
+                    height: 10rem;
+                    width: 50%;
+                }
+
+                button {
+                    background-image: linear-gradient(-48deg, #316579, #4708af);
+                    font-size: $xs-font-size;
+                    height: 3.5rem;
+                    background-color: $dark-blue;
+                    box-shadow: $box-shadow;
+                    transition-duration: 0.3s;
+
+                    @include breakpoint(min, small) {
+                        height: 5rem;
+                    }
+                }
+            }
+        }
+
+        &--seconde {
+            position: absolute;
+            height: 90%;
+            width: 90%;
+            display: none;
+
+            &>div {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                position: relative;
+
+                @include breakpoint(min, small) {
+                    flex-direction: row;
+                    height: 100%;
+                    width: 100%;
+                }
+
+                .detail {
+                    &__img {
+                        align-items: center;
+                        display: flex;
+                        position: absolute;
+                        top: 5%;
+                        left: 0;
+                        height: 3.5rem;
+                        justify-content: center;
+                        width: 4rem;
+
+                        @include breakpoint(min, small) {
+                            height: 100%;
+                            position: static;
+                            width: 50%;
+                        }
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+
+                            @include breakpoint(min, small) {
+                                height: 50%;
+                                width: 50%;
+                            }
+                        }
+                    }
+
+                    &__content {
+                        @include breakpoint(min, small) {
+                            height: 100%;
+                            width: 50%;
+                        }
+
+                        .content__header {
+                            align-items: center;
+                            display: flex;
+                            font-size: $s-font-size;
+                            justify-content: space-evenly;
+                            width: 80%;
+
+                            @include breakpoint(min, small) {
+                                font-size: $m-font-size;
+                                margin: $s-margin-size 0;
+                            }
+
+                            button {
+                                background: none;
+                                border: none;
+                                cursor: pointer;
+
+                                .fa-arrow-left {
+                                    height: 1.8rem;
+                                    width: 1.8rem;
+
+                                    @include breakpoint(min, small) {
+                                        height: 5.3rem;
+                                        width: 5.3rem;
+                                    }
+                                }
+                            }
+                        }
+
+                        p {
+                            color: $grey;
+                            font-size: $s-font-size;
+                            line-height: 1.5;
+                            margin: $xxs-margin-size 0;
+                            text-align: justify;
+
+
+                            @include breakpoint(min, small) {
+                                padding: $s-padding-size $l-padding-size;
+                            }
+                        }
+                    }
+
+                    &__button {
+                        align-items: center;
+                        display: flex;
+                        justify-content: center;
+
+                        button {
+                            background-color: $dark-blue;
+                            box-shadow: $box-shadow;
+                            color: #ffffff;
+                            height: 3.5rem;
+                            transition-duration: 0.3s;
+
+                            &:hover, &:active {
+                                transform: scale(0.95);
+                                box-shadow: $box-shadow-hover;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .seconde {
+                &__immigration {
+                    position: absolute;
+                    opacity: 0;
+                }
+
+                &__immigrant {
+                    position: absolute;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}

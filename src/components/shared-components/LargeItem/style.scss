@@ -1,0 +1,101 @@
+@import '../../../stylesheets/abstract/index.scss';
+
+.large-item {
+    padding: 0 $xs-padding-size;
+    margin: $xs-margin-size 0 ;    
+
+    @include breakpoint(min,small) {
+        padding: 0 $s-padding-size;
+    }
+
+    &__title {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+
+        h2 {
+            color: $grey;
+            font-size: $m-font-size;
+        }
+
+        button {
+            background: none;
+            border: none;
+            cursor: pointer;
+
+            .icon {
+                color: $dark-blue ;
+                height: 2.4rem;
+                width: 2.4rem ;
+            }
+        }
+    }
+
+    &__items {
+        @include breakpoint(min,small) {
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .items__item {
+            align-items: center;
+            background-color: $light-grey;
+            border-radius: $s-border-radius;
+            box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.25);
+            color: $grey;
+            display: flex;
+            justify-content: space-between;
+            margin: $xxs-margin-size ;
+            padding: $xs-padding-size $xs-padding-size;
+
+            @include breakpoint(min,small) {
+                min-width: 35rem;
+            }
+
+            .item {
+                &__content {
+                    width: 80%;
+
+                    .content {
+                        &__title {
+                            font-size: $s-font-size;
+                            margin-bottom: $xxs-margin-size ;
+
+                            .title__main {
+                                font-size: $s-font-size ;
+                                font-weight: bold ;
+                            }
+                        }
+
+                        &__subtitle {
+                            align-items: center;
+                            display: flex;
+                            font-size: $s-font-size;
+                            justify-content: space-between;
+                        }
+                    }
+                }
+
+                &__delete {
+                    border-right: 2px solid #ffffff;
+                    padding-right: $xxs-padding-size;
+
+                    button {
+                        background: none;
+                        border: none ;
+                        cursor: pointer;
+                        padding: 0;
+
+                        .icon {
+                            color: $dark-blue ;
+                            height: 2.6rem;
+                            width: 2.6rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

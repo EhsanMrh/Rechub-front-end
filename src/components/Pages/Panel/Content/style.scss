@@ -1,0 +1,9 @@
+@import '../../../../stylesheets/abstract/index.scss';
+
+.content {
+    margin-top: 15rem !important ; 
+    
+    @include breakpoint(min, small) {
+        margin-top: 10rem !important;
+    }
+}

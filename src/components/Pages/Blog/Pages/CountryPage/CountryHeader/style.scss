@@ -1,0 +1,50 @@
+@import '../../../../../../stylesheets/abstract/index.scss';
+
+.country-header {
+    background-repeat: no-repeat;
+    height: 95vh;
+    position: relative;
+
+    @include breakpoint(min, small) {
+        position: static;
+        background-size: 100% 100% ;
+        align-items: center;
+        display: flex;
+        height: 60vh;
+        justify-content: space-between;
+    }
+
+    &__image {
+        height: 20%;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+
+        @include breakpoint(min, small) {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 50%;
+        }
+    }
+
+    &__describe {
+        height: 50%;
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        width: 90%;
+
+        @include breakpoint(min, small) {
+            height: 90%;
+            margin: $m-margin-size 0;
+            margin-left: $l-margin-size;
+            position: static;
+            transform: none;
+            width: 34rem;
+        }
+    }
+}

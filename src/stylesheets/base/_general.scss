@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box ;
+    outline: none ;
+}
+
+html {
+    font-size: 62.5% ;
+    scroll-behavior: smooth ;
+}
+
+body {
+    font-family: $font-family ;
+    direction: rtl ;
+    width: 100% ;
+}
+
+.App {
+    width: 100% ;
+}
+
+.section {
+    margin: $s-margin-size 0 ;
+    width: 100% ;
+
+    &:first-child {
+        margin-top: 0 ;
+    }
+
+    &:last-child {
+        margin-bottom: 0 ;
+    }
+    
+    @include breakpoint(min, small) {
+        margin: $l-margin-size 0 ;
+    }
+}
+
+.button {
+    border: none;
+    border-radius: $m-border-radius;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: $font-family;
+    font-size: $s-font-size;
+    padding: $xxs-padding-size $xs-padding-size;
+    height: 4rem;
+    width: 14.4rem;
+
+    @include breakpoint(min, small) {
+        height: 5rem;
+        width: 17rem ;
+    }
+}

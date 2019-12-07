@@ -1,0 +1,173 @@
+@import '../../../../stylesheets/abstract/index.scss';
+
+.footer {
+    background-color: $light-grey;
+
+    &__top {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: $xxs-margin-size;
+
+        @include breakpoint(min, small) {
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding: $m-padding-size 0;
+        }
+
+        .footer {
+            &__detail {
+                align-items: center;
+                background-color: inherit;
+                border-bottom: 4px solid #ffffff;
+                display: flex;
+                height: 12rem;
+                justify-content: space-between;
+                margin-bottom: $xxs-margin-size;
+                width: 90%;
+
+                @include breakpoint(min, small) {
+                    border: none;
+                    width: 30%;
+                }
+
+                .detail {
+                    &__logo {
+                        width: 30%;
+
+                        img {
+                            height: 8.7rem;
+                            width: 8.7rem;
+                        }
+                    }
+
+                    &__content {
+                        align-items: center;
+                        display: flex;
+                        flex-direction: column;
+                        height: 100%;
+                        justify-content: space-evenly;
+                        width: 65%;
+
+                        &--title {
+                            align-items: center;
+                            display: flex;
+                            justify-content: space-between;
+                            width: 100%;
+
+                            .text-logo {
+                                color: $dark-blue;
+                                font-size: $l-font-size;
+                                font-weight: bold;
+                            }
+
+                            span,
+                            .description {
+                                color: $grey;
+                                font-size: $m-font-size;
+                                font-weight: bold;
+                            }
+                        }
+
+                        &--phone {
+                            align-items: center;
+                            color: $grey;
+                            display: flex;
+                            font-size: $s-font-size;
+                            justify-content: space-between;
+                            width: 100%;
+
+
+                            @include breakpoint(min, small) {
+                                font-size: $m-font-size;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &__license {
+            align-items: center;
+            display: flex;
+            justify-content: space-evenly;
+            padding: $xs-padding-size $xxs-padding-size;
+            width: 90%;
+
+
+            @include breakpoint(min, small) {
+                width: 50%;
+            }
+
+            img {
+                height: 10rem;
+                width: 10rem;
+
+                @include breakpoint(min, small) {
+                    height: 12rem;
+                    width: 12rem ;
+                }   
+            }
+        }
+    }
+
+    &__link {
+        align-items: center;
+        background-color: $grey;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: $xs-padding-size 0;
+        width: 100%;
+
+
+        @include breakpoint(min, small) {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .link__items {
+            align-items: center;
+            display: flex;
+            justify-content: space-evenly;
+            width: 40%;
+
+
+            @include breakpoint(min, small) {
+                justify-content: flex-start;
+            }
+
+            a {
+                display: inline-block;
+
+
+                @include breakpoint(min, small) {
+                    margin: 0 $xxs-margin-size;
+                }
+
+                .icon {
+                    height: 2rem;
+                    width: 2rem;
+                    color: #ffffff ;
+
+
+                    @include breakpoint(min, small) {
+                        height: 3rem;
+                        width: 3rem;
+                    }
+                }
+            }
+        }
+
+        p {
+            color: #ffffff;
+            font-size: $xs-font-size;
+            margin: 0 ;
+
+            @include breakpoint(min, small) {
+                font-size: $m-font-size;
+            }
+        }
+    }
+}
